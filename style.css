@@ -1,0 +1,385 @@
+:root {
+    --green: #008000;
+    --black: #263238;
+    --white: #E5E5E5;
+}
+h1{
+    font-weight: 700;
+    font-size: 4em;
+    line-height: 78px;
+    margin:0 0 1em 0;
+}
+h2{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 72px;
+    color: var(--black);
+}
+h3{
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 63px;
+}
+h4{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: var(--black);
+}
+p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 177%;
+    color: var(--black);
+    margin: 1rem 0;
+}
+span{
+    color:var(--green);
+}
+ul {
+    padding: 0 2rem;
+}
+/* button */
+.btn{
+    width: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px;
+    gap: 10px;
+    background-color: var(--green);
+    border-radius: 10px;
+}
+.btn> a {
+    color: var(--white);
+}
+a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    color: var(--black);
+}
+/* button */
+
+/* list */
+li{
+    display: flex;
+    gap: 74px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+li:first-child{
+    margin-inline: 6px;
+}
+li > span{
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+}
+/* container */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem;
+    background-color: #b3c9a1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+/* nav-bar */
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    flex-direction: column;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.header div p {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+}
+.list {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.nav-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.burger-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+}
+.burger-menu-img{
+    width:30px;
+}
+.nav{
+    max-height: 0;
+    overflow: hidden;
+    transition: 1.3s;
+}
+.nav.active  {
+    max-height: 100vh;
+}
+/* nav-bar */
+
+/* shop list */
+.shop-list{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    margin-bottom: 1em;
+}
+/* shop list */
+
+/* invest-agriculture */
+.invest-agriculture{
+    text-align: center;
+    margin-top: 3.5em;
+    margin-bottom: 2.5em;
+}
+.invest-agriculture div{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+div input{
+    border: 0;
+    outline:var(--green);
+    padding-inline: 10px;
+}
+/* invest-agriculture */
+/* farmvest-works */
+.farmvest-works{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.farmvest-works-list{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    margin-bottom: 2rem;
+}
+.farmvest-works-main-list > p {
+    margin:1rem 0 2rem 0;
+}
+.farmvest-works-list div h4{
+    margin-bottom: 1rem;
+}
+/* farmvest-works */
+/* acardion */
+.acardion {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.acardion-title{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1.5rem;
+    align-items: center;
+}
+.acardion div div img {
+    width: 15px;
+}
+.acardion-card.active .acardion-title img{
+    transform: rotate(180deg);
+    transition: .1s .1s;
+}
+.acardion-contant{
+    padding-inline: 2.5rem;
+    max-height:0;
+    overflow: hidden;
+    transition: 1.5s;
+}
+.acardion-card.active .acardion-contant{
+    max-height: 100vh;
+    background-color: #f3ebeb;
+}
+.acardion-card.active .acardion-title{
+    background-color: rgb(211, 76, 22);
+}
+/* choose-farmvest */
+.choose-farmvest{
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.choose-farmvest-list{
+    margin-bottom: 2rem;
+    padding: 3.5rem;
+}
+.farmvest-works-main-list-title >p{
+    margin: 2rem 0 3rem 0;
+}
+.farmvest-works-card img,
+.future-invest div img,
+.choose-farmvest-img img{
+    width: 300px;
+}
+.download-app a img{
+    width:100%;
+    border-radius: 10px;
+}
+
+/* costumer-card */
+.costumer-card{
+    margin: 2rem 0;
+}
+.costumer-card-auth p{
+    margin-bottom: 4rem;
+}
+.costumer-card span{
+    color: var(--black);
+    margin: 20px 0;
+}
+/* download-app */
+.download-app{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 1.3rem 0;
+}
+.download-app div a{
+    width: 167px;
+    height: 57px;
+}
+.download-app-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+
+}
+
+/* mix css */
+.costumer-card , .future-invest{
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+
+/* footer */
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-email div {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+.footer-follow-us{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-follow-us div{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+.footer-farmvest p:first-child, .footer>p  {
+    font-family: cursive;
+    font-weight: bold;
+}
+
+
+@media  (min-width:320px) {
+    .container{
+        width: 100%;
+    }
+    h1, h2 , h3{
+        font-size:2.5rem;
+        line-height: 48px;
+    }
+    h1, p {
+        margin: 0;
+    }
+    li {
+        gap:48px
+    }
+    .invest-agriculture {
+    margin-top: 1.5em;
+    }
+   
+} 
+@media  (min-width:576px) {
+    .footer-follow-us{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .download-app-btn{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .costumer-card , 
+    .future-invest,
+    .choose-farmvest,
+    .shop-list {
+        flex-direction: row;
+    }
+    .shop-list{
+       overflow: hidden;
+      
+        cursor: pointer;
+        
+    }
+}   
+
+@media  (min-width:768px) {
+    .footer-email{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .farmvest-works{
+    flex-direction: row-reverse;
+    }
+    h1, h2 , h3{
+        font-size:3.5rem;
+        line-height: 78px;
+    }
+}   
+
+@media  (min-width:990px) {
+    .costumer-list{
+        display: flex;
+    }
+    .burger-menu-img{ 
+        display: none;
+    }
+    .nav{
+        max-height: 100vh;  
+        gap: 3rem;    
+    }
+    .nav-btn, .list, .nav, .header {
+        flex-direction: row;
+    }
+} 
