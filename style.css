@@ -121,6 +121,12 @@ li > span{
     flex-direction: column;
     gap: 1rem;
 }
+.nav-btn .btn:first-child {
+    background-color: var(--white);
+}
+.nav-btn .btn:first-child a {
+    color: var(--black);
+}
 .burger-menu {
     display: flex;
     justify-content: space-between;
@@ -147,6 +153,10 @@ li > span{
     flex-direction: column;
     gap: 2em;
     margin-bottom: 1em;
+}
+.shop-list a {
+    transition: all 0.2s; 
+    cursor: pointer;
 }
 /* shop list */
 
@@ -180,6 +190,9 @@ div input{
     gap:2rem;
     margin-bottom: 2rem;
 }
+.farmvest-works-list img {
+    cursor: pointer;
+}
 .farmvest-works-main-list > p {
     margin:1rem 0 2rem 0;
 }
@@ -192,12 +205,19 @@ div input{
     gap: 15px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
+
 .acardion-title{
     display: flex;
     justify-content: space-between;
     padding-inline: 1.5rem;
     align-items: center;
+}
+.acardion-title > p {
+    font-family:cursive;
+    font-weight: bold;
+    letter-spacing: 1.5px;
 }
 .acardion div div img {
     width: 15px;
@@ -211,13 +231,15 @@ div input{
     max-height:0;
     overflow: hidden;
     transition: 1.5s;
+    border-radius:0 0 10px 10px;
 }
 .acardion-card.active .acardion-contant{
     max-height: 100vh;
     background-color: #f3ebeb;
 }
 .acardion-card.active .acardion-title{
-    background-color: rgb(211, 76, 22);
+    background-color: rgb(179, 211, 127);
+    
 }
 /* choose-farmvest */
 .choose-farmvest{
@@ -279,7 +301,10 @@ div input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:1rem;
+    gap: 4rem;
+}
+.costumer-card{
+    gap: 1rem;
 }
 
 /* footer */
@@ -303,7 +328,7 @@ div input{
     gap: 20px;
     justify-content: flex-start;
 }
-.footer-farmvest p:first-child, .footer>p  {
+.footer-farmvest p:first-child, .footer>p ,.footer-call-us >p:first-child {
     font-family: cursive;
     font-weight: bold;
 }
@@ -345,12 +370,9 @@ div input{
     .shop-list {
         flex-direction: row;
     }
-    .shop-list{
-       overflow: hidden;
-      
-        cursor: pointer;
-        
-    }
+    /* .shop-list{
+        overflow: hidden;   
+    } */
 }   
 
 @media  (min-width:768px) {
@@ -358,9 +380,10 @@ div input{
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 2rem;
     }
     .farmvest-works{
-    flex-direction: row-reverse;
+        flex-direction: row-reverse;
     }
     h1, h2 , h3{
         font-size:3.5rem;
@@ -371,6 +394,7 @@ div input{
 @media  (min-width:990px) {
     .costumer-list{
         display: flex;
+        gap:1.5rem;
     }
     .burger-menu-img{ 
         display: none;
@@ -382,4 +406,28 @@ div input{
     .nav-btn, .list, .nav, .header {
         flex-direction: row;
     }
-} 
+    .choose-farmvest-img img{
+        filter: blur(3px);
+    }
+    /* hovers */
+    .farmvest-works:hover .farmvest-works-card{
+        width: 450px;
+        transform: rotate(15deg);    
+        transition: 0.5s ease-in-out; 
+    }
+    .future-invest:hover img{
+        width: 350px;
+        transform: rotate(-15deg);    
+        transition: 0.5s ease; 
+    }
+    .choose-farmvest:hover img{
+        width: 350px;
+        filter: blur(0);
+        transition: .5s ease-in-out;
+    }
+    .farmvest-works-list img:hover  {
+        width: 65px;
+    }
+    /* hover end */
+
+}
