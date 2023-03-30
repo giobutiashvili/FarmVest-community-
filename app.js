@@ -17,13 +17,19 @@ document.querySelectorAll('.shop-list a').forEach(item => {
 
 // accordion menu function
 
-const acordion = document.querySelectorAll('.acardion .acardion-card');
-acordion.forEach(foo =>{
-    foo.onclick = () => {
-        acordion.forEach(removefoo => { removefoo.classList.remove('active') });
-        foo.classList.toggle('active');
-    }
-})
+const acordionCards = document.querySelectorAll('.acardion .acardion-card');
+acordionCards.forEach(card => {
+  card.addEventListener('click', () => {
+    acordionCards.forEach(otherCard => {
+      if (otherCard !== card) {
+        otherCard.classList.remove('active');
+      }
+    });
+    card.classList.toggle('active');
+  });
+});
+
+
 
 // accordion menu box-shadow function
 
@@ -34,14 +40,19 @@ document.querySelectorAll('.acardion-card').forEach(card => {
   
 
 
+//  svg color change function 
 
-const svgElement = document.querySelector('#my-svg');
-
-svgElement.addEventListener('mouseenter', () => {
-svgElement.setAttribute('fill', 'red');
+document.querySelectorAll('.farmvest-works-list').forEach(card => {
+  card.addEventListener('mouseover', () => {
+    card.querySelectorAll('svg').forEach(svgElement => {
+      svgElement.style.fill = '#B71C1C';
+      svgElement.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.2)';
+    });
+  });
+  card.addEventListener('mouseout', () => {
+    card.querySelectorAll('svg').forEach(svgElement => {
+      svgElement.style.fill = '';
+      svgElement.style.boxShadow = '';
+    });
+  });
 });
-
-svgElement.addEventListener('mouseleave', () => {
-svgElement.removeAttribute('fill');
-});
-

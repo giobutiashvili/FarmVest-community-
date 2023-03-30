@@ -189,8 +189,6 @@ div input{
     align-items: center;
     gap:2rem;
     margin-bottom: 2rem;
-}
-.farmvest-works-list img {
     cursor: pointer;
 }
 .farmvest-works-main-list > p {
@@ -373,6 +371,7 @@ div input{
     /* .shop-list{
         overflow: hidden;   
     } */
+    
 }   
 
 @media  (min-width:768px) {
@@ -425,8 +424,8 @@ div input{
         filter: blur(0);
         transition: .5s ease-in-out;
     }
-    .farmvest-works-list img:hover  {
-        width: 65px;
+    .farmvest-works-list:hover svg {
+        width: 75px;
     }
     /* hover end */
 
