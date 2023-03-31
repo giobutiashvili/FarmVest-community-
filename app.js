@@ -6,6 +6,13 @@ function burgerMenu() {
     document.getElementById('menuIcon').style.transition = '1.3s';
   }
   
+// dart team on/off
+const main= document.querySelector('body')
+const toggle = document.querySelector('.darkmode');
+toggle.addEventListener('click', () => {
+  document.querySelector('body').classList.toggle('dark');
+});
+
 
 //  shop list mouse hover function 
 
@@ -13,7 +20,6 @@ document.querySelectorAll('.shop-list a').forEach(item => {
     item.addEventListener('onmouseover', () => item.style.width = '300px');
     item.addEventListener('onmouseout', () => item.style.width = 'auto');
 });
- 
 
 // accordion menu function
 
@@ -28,8 +34,6 @@ acordionCards.forEach(card => {
     card.classList.toggle('active');
   });
 });
-
-
 
 // accordion menu box-shadow function
 
