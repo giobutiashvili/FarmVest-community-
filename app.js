@@ -9,18 +9,19 @@ function burgerMenu() {
 // dart team on/off
 const main= document.querySelector('body')
 const darkmode = document.querySelector('.darkmode');
+const darkSvg = document.querySelector('.darkmode svg');
+
 darkmode.addEventListener('click', () => {
   document.querySelector('body').classList.toggle('dark');
     main.style.transition= '1s';
-    
 });
-
 
 //  shop list mouse hover function 
 
-document.querySelectorAll('.shop-list a').forEach(item => {
-    item.addEventListener('onmouseover', () => item.style.width = '300px');
-    item.addEventListener('onmouseout', () => item.style.width = 'auto');
+document.querySelectorAll('.shop-list img').forEach(item => {
+  
+    item.addEventListener('mouseover', () => item.style.width = '300px', );
+    item.addEventListener('mouseout', () => item.style.width = 'auto');
 });
 
 // accordion menu function

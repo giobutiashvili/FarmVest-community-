@@ -7,7 +7,6 @@
 }
 /* darck/mode */
 .dark{
-        
     --black:#fff;
     --white:#0000;
     --bg-color:#263238;
@@ -15,6 +14,7 @@
 body {
     background-color: var(--bg-color);
 }
+
 h1{
     font-weight: 700;
     font-size: 4em;
@@ -53,18 +53,12 @@ span{
 ul {
     padding: 0 2rem;
 }
-/* id-s */
-#moon,#sun{
-    width: 30px;
-    cursor: pointer;
-}
 .nav div{
     text-align: right;
 }
-.darkmode{
-    width: 65px;
+.darkmode svg{
+    fill: var(--black);
 }
-
 /* button */
 .btn{
     width: 130px;
@@ -77,6 +71,9 @@ ul {
     background-color: var(--green);
     border-radius: 10px;
     color: var(--white);
+    border: 1px solid #263238;
+    cursor: pointer;
+
 }
 .btn> a {
     color: var(--a-color);
@@ -142,6 +139,7 @@ li > span{
     flex-direction: column;
     gap: 1rem;
 }
+
 .nav-btn{
     display: flex;
     flex-direction: column;
@@ -149,6 +147,7 @@ li > span{
 }
 .nav-btn .btn:first-child {
     background-color: var(--white);
+    border-color: var(--black);
 }
 .nav-btn .btn:first-child a {
     color: var(--black);
@@ -170,13 +169,9 @@ li > span{
 .burger-menu-img{
     width:30px;
 }
-.switcher{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.switcher img{
-    width: 50px;
+
+.darkmode svg{
+    width: 30px;
 }
 /* nav-bar */
 
@@ -190,7 +185,7 @@ li > span{
     background: rgba(255, 255, 255, 0.5);
 }
 .shop-list a {
-    transition: all 0.2s; 
+    transition: all 1.2s; 
     cursor: pointer;
 }
 /* shop list */
