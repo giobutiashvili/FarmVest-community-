@@ -2,11 +2,19 @@
     --green: #008000;
     --black: #263238;
     --white: #E5E5E5;
-    --bg-color: #263238
+    --bg-color: #E5E5E5;
+    --a-color:#E5E5E5;
 }
-
-
-
+/* darck/mode */
+.dark{
+        
+    --black:#fff;
+    --white:#0000;
+    --bg-color:#263238;
+}
+body {
+    background-color: var(--bg-color);
+}
 h1{
     font-weight: 700;
     font-size: 4em;
@@ -68,9 +76,10 @@ ul {
     gap: 10px;
     background-color: var(--green);
     border-radius: 10px;
+    color: var(--white);
 }
 .btn> a {
-    color: var(--white);
+    color: var(--a-color);
 }
 a {
     font-weight: 500;
@@ -88,12 +97,12 @@ li{
     gap: 74px;
     align-items: center;
     margin-bottom: 24px;
+    color: var(--black);
 }
 li:first-child{
     margin-inline: 6px;
 }
 li > span{
-
     font-weight: 700;
     font-size: 36px;
     line-height: 40px;
@@ -108,7 +117,6 @@ li > span{
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
-
 }
 /* nav-bar */
 .header{
@@ -179,6 +187,7 @@ li > span{
     flex-direction: column;
     gap: 2em;
     margin-bottom: 1em;
+    background: rgba(255, 255, 255, 0.5);
 }
 .shop-list a {
     transition: all 0.2s; 
@@ -217,11 +226,16 @@ div input{
     margin-bottom: 2rem;
     cursor: pointer;
 }
-.farmvest-works-main-list > p {
-    margin:1rem 0 2rem 0;
+.farmvest-works-list div:first-child{
+    background: rgba(0, 128, 0, 0.1);
+    border-radius: 50%;
+    padding: 10px;
 }
 .farmvest-works-list div h4{
     margin-bottom: 1rem;
+}
+.farmvest-works-main-list > p {
+    margin:1rem 0 2rem 0;
 }
 /* farmvest-works */
 /* acardion */
@@ -237,6 +251,9 @@ div input{
     justify-content: space-between;
     padding-inline: 1.5rem;
     align-items: center;
+    background: rgba(0, 128, 0, 0.05);
+    border-radius: 20px;
+    padding: 24px;
 }
 .acardion-title > p {
     font-family:cursive;
@@ -248,18 +265,19 @@ div input{
 }
 .acardion-card.active .acardion-title img{
     transform: rotate(180deg);
-    transition: .1s .1s;
+    transition: 1s ;
 }
 .acardion-contant{
     padding-inline: 2.5rem;
     max-height:0;
     overflow: hidden;
-    transition: 1.5s;
+    transition: 1s;
     border-radius:0 0 10px 10px;
 }
 .acardion-card.active .acardion-contant{
     max-height: 100vh;
-    background-color: #f3ebeb;
+    background-color: var(--white);
+    border: 1px solid var(--green);
 }
 .acardion-card.active .acardion-title{
     background-color: rgb(179, 211, 127);
@@ -292,6 +310,8 @@ div input{
 /* costumer-card */
 .costumer-card{
     margin: 2rem 0;
+    background: rgba(0, 128, 0, 0.05);
+    border-radius: 20px;
 }
 .costumer-card-auth p{
     margin-bottom: 4rem;
@@ -394,10 +414,14 @@ div input{
     .shop-list {
         flex-direction: row;
     }
-    /* .shop-list{
+    .shop-list{
         overflow: hidden;   
-    } */
-    
+    }
+    .future-invest div:first-child{
+        background: rgba(0, 128, 0, 0.05);
+        border-radius: 20px;
+        padding: 70px 24px;
+    }
 }   
 
 @media  (min-width:768px) {
@@ -440,7 +464,7 @@ div input{
         transform: rotate(15deg);    
         transition: 0.5s ease-in-out; 
     }
-    .future-invest:hover img{
+    .future-invest:hover div:first-child{
         width: 350px;
         transform: rotate(-15deg);    
         transition: 0.5s ease; 
@@ -451,11 +475,8 @@ div input{
         transition: .5s ease-in-out;
     }
     .farmvest-works-list:hover svg {
-        width: 75px;
+        width: 70px;
     }
     /* hover end */
-    .dark{
-        background-color: var(--black);
-        color: var(--white);
-    }
+  
 }

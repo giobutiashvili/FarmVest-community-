@@ -8,9 +8,11 @@ function burgerMenu() {
   
 // dart team on/off
 const main= document.querySelector('body')
-const toggle = document.querySelector('.darkmode');
-toggle.addEventListener('click', () => {
+const darkmode = document.querySelector('.darkmode');
+darkmode.addEventListener('click', () => {
   document.querySelector('body').classList.toggle('dark');
+    main.style.transition= '1s';
+    
 });
 
 
@@ -49,14 +51,12 @@ document.querySelectorAll('.acardion-card').forEach(card => {
 document.querySelectorAll('.farmvest-works-list').forEach(card => {
   card.addEventListener('mouseover', () => {
     card.querySelectorAll('svg').forEach(svgElement => {
-      svgElement.style.fill = '#B71C1C';
-      svgElement.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.2)';
+      svgElement.style.fill = '#B71C1C';    
     });
   });
   card.addEventListener('mouseout', () => {
     card.querySelectorAll('svg').forEach(svgElement => {
       svgElement.style.fill = '';
-      svgElement.style.boxShadow = '';
     });
   });
 });
