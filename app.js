@@ -6,10 +6,18 @@ function burgerMenu() {
     document.getElementById('menuIcon').style.transition = '1.3s';
   }
   
+// nav lists hover 
+document.querySelectorAll('.list a').forEach(item => {
+  
+  item.addEventListener('mouseover', () => item.style.color = 'yellow');
+  item.addEventListener('mouseover', () => item.style.transition = '2s');
+  item.addEventListener('mouseout', () => item.style.color = '');
+  item.addEventListener('mouseout', () => item.style.transition = '');
+});
+
 // dart team on/off
 const main= document.querySelector('body')
 const darkmode = document.querySelector('.darkmode');
-const darkSvg = document.querySelector('.darkmode svg');
 
 darkmode.addEventListener('click', () => {
   document.querySelector('body').classList.toggle('dark');

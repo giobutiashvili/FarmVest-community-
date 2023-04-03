@@ -472,6 +472,10 @@ div input{
     .farmvest-works-list:hover svg {
         width: 70px;
     }
+    .costumer-card:hover{
+        box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3; 
+    }
+    
     /* hover end */
   
 }
