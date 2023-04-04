@@ -5,24 +5,24 @@ function burgerMenu() {
       document.querySelector('.nav').classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
     document.getElementById('menuIcon').style.transition = '1.3s';
   }
+  // dart team on/off
+  const main= document.querySelector('body')
+  const darkmode = document.querySelector('.darkmode');
+  
+  darkmode.addEventListener('click', () => {
+    document.querySelector('body').classList.toggle('dark');
+      main.style.transition= '1s';
+  });
   
 // nav lists hover 
 document.querySelectorAll('.list a').forEach(item => {
   
-  item.addEventListener('mouseover', () => item.style.color = 'yellow');
-  item.addEventListener('mouseover', () => item.style.transition = '2s');
+  item.addEventListener('mouseover', () => item.style.color = 'green');
+  item.addEventListener('mouseover', () => item.style.transition = '0.5s');
   item.addEventListener('mouseout', () => item.style.color = '');
   item.addEventListener('mouseout', () => item.style.transition = '');
 });
 
-// dart team on/off
-const main= document.querySelector('body')
-const darkmode = document.querySelector('.darkmode');
-
-darkmode.addEventListener('click', () => {
-  document.querySelector('body').classList.toggle('dark');
-    main.style.transition= '1s';
-});
 
 //  shop list mouse hover function 
 
@@ -53,7 +53,20 @@ document.querySelectorAll('.acardion-card').forEach(card => {
     card.addEventListener('mouseout', () => card.style.boxShadow = 'none');
   });
   
+// slide show on click function
 
+const cardImg = document.querySelectorAll('.costumer-card')
+const btn = document.querySelector('.showallbtn')
+
+for (let i = 2; i<cardImg.length; i++) {
+  cardImg[i].style.display = 'none';
+};
+
+btn.addEventListener('click', () => {
+  cardImg.forEach(card => {
+    card.style.display = 'block';
+  })
+})
 
 //  svg color change function 
 
